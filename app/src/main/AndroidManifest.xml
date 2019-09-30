@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.haoke.myvideo">
+
+    <!-- <uses-permission android:name="com.haoke.permission.RECEIVE_MY_BROADCAST" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 如果您想获得客户端crash的报告, 需要添加这个权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 如果您使用了友盟自动更新提醒功能，需添加这个权限，为了将更新的APK临时存在SD卡里 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application
+        android:name="com.haoke.myproject.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.haoke.myvideo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name="com.haoke.myproject.activity.StartActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.haoke.myproject.activity.MyMainActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity android:name="com.haoke.myproject.activity.MyStartActivity"></activity> -->
+
+
+        <!-- <activity -->
+        <!-- android:name="com.haoke.myproject.activity.StartActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/Theme.AppStartLoadTranslucent"> -->
+        <!-- </activity> -->
+        <!-- 微信 -->
+        <activity
+            android:name="com.haoke.myproject.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent" />
+        <!-- 微信 -->
+        <activity
+            android:name="com.zxing.adddevice.AddDeviceActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name="com.haoke.myproject.AboutActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name="com.haoke.myproject.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.ForgotActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.EditPassWordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.TwoCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.BinDingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.NewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.SetMapActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name="com.haoke.myproject.activity." -->
+        <!-- android:screenOrientation="portrait" /> -->
+
+
+        <!-- 百度 -->
+        <!-- 百度地图 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="NZGfElW3U1YOFAhpIDevNoeVLI86Mq5E" />
+
+        <activity
+            android:name="com.haoke.myproject.activity.PlayerActivity"
+            android:screenOrientation="user"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.haoke.myproject.activity.SettingActivity" />
+
+        <service
+            android:name="com.haoke.ijkplayer.services.MediaPlayerService"
+            android:enabled="false"
+            android:exported="false" />
+
+        <activity android:name="com.haoke.myproject.activity.ListActivity"></activity>
+    </application>
+
+</manifest>

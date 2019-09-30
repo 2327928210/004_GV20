@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GV20</string>
+    <string name="cue_network_anomaly">网络异常</string>
+    <!-- 手机注册,目前只支持中国 -->
+
+    <!-- 多通道相关字符 -->
+
+    <!-- 设备相关 -->
+
+    <!-- 编码设置相关字符串 -->
+
+    <!-- 图像设置相关字符串 -->
+
+    <!-- 录像设置相关字符串 -->
+
+    <!-- 存储设置相关字符串 -->
+
+    <!--鱼眼灯泡控制相关字段-->
+
+
+</resources>

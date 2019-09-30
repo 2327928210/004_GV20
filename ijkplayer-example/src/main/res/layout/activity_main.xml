@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#000">
+        <com.haoke.example.widget.media.IjkVideoView
+            android:id="@+id/video_view"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"></com.haoke.example.widget.media.IjkVideoView>
+        <TableLayout
+            android:visibility="gone"
+            android:id="@+id/hud_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:background="@color/ijk_transparent_dark"
+            android:padding="8dp" />
+        <TextView
+            android:id="@+id/video_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:text="正在缓冲..."/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

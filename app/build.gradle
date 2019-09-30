@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '28.0.3'
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = ['src/main/res', 'src/main/res/color']
+        }
+
+    }
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.haoke.myvideo"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_TOOLCHAIN=clang", "-DANDROID_PLATFORM=android-21"
+                cppFlags "-std=c++11 -frtti -fexceptions"
+            }
+        }
+        ndk {
+            abiFilters "armeabi"
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'apk.hfc'
+            keyPassword 'a1b2c3d4'
+            storeFile file('apk.clw')
+            storePassword 'a1b2c3d4'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+
+    useLibrary 'org.apache.http.legacy'
+    productFlavors {
+        all32 { minSdkVersion 14 }
+        all64 { minSdkVersion 21 }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile project(':library')
+    //    compile project(':ijkplayer-example')
+    compile project(':ijkplayer-java')
+    compile project(':ijkplayer-exo')
+    all32Compile project(':ijkplayer-armv5')
+    all32Compile project(':ijkplayer-armv7a')
+    all32Compile project(':ijkplayer-x86')
+    all64Compile project(':ijkplayer-armv5')
+    all64Compile project(':ijkplayer-armv7a')
+    all64Compile project(':ijkplayer-arm64')
+    all64Compile project(':ijkplayer-x86')
+    all64Compile project(':ijkplayer-x86_64')
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.squareup:otto:1.3.8'
+    compile project(':rtsp')
+    compile project(':encoder')
+}

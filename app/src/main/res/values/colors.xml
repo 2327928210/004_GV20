@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="demo_title">#ff0d0d0d</color>
+    <color name="black">#000000</color>
+    <!-- 灰色 -->
+    <color name="text_gray">#BABABA</color>
+    <!-- 电子围栏 -->
+    <color name="transparent_main_color">#552a8efe</color>
+    <!-- 纯色 -->
+    <color name="transparent_6">#6000</color>
+    <color name="white_a">#aFFF</color>
+    <color name="white_3">#3FFF</color>
+    <color name="gray_6">#666</color>
+    <color name="gray_a">#aaa</color>
+    <color name="gray_b">#BBB</color>
+    <color name="gray_ef">#f0f0f0</color>
+    <color name="green">#53D96D</color>
+    <color name="text_black">#7A7A7A</color>
+    <color name="blue_n">#1eafff</color>
+    <color name="blue_p">#188CCC</color>
+    <color name="violet">#146BE1</color>
+    <!-- 主界面 -->
+    <color name="voice_bg">#0064b4</color>
+    <!-- 电子围栏 -->
+    <color name="color_ccc">#ccc</color>
+</resources>

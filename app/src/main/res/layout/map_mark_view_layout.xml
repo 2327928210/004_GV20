@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="@dimen/layout_x_230"
+        android:layout_height="@dimen/layout_x_150"
+        android:background="@drawable/popup"
+        android:padding="@dimen/layout_x_5">
+        <LinearLayout
+            android:id="@+id/rel_sattue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/layout_x_5">
+            <TextView
+                android:layout_marginLeft="@dimen/layout_x_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location_state"
+                android:textColor="@color/black"
+                android:textSize="@dimen/layout_x_18" />
+            <TextView
+                android:id="@+id/tv_statue"
+                android:layout_marginLeft="@dimen/layout_x_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="离线"
+                android:textColor="@color/black"
+                android:textSize="@dimen/layout_x_16" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rel_imei"
+            android:layout_below="@+id/rel_sattue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/layout_y_2">
+            <TextView
+                android:layout_marginLeft="@dimen/layout_x_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IMEI:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/layout_x_18" />
+            <TextView
+                android:id="@+id/tv_imei"
+                android:layout_marginLeft="@dimen/layout_x_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123456789"
+                android:textColor="@color/black"
+                android:textSize="@dimen/layout_x_16" />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/rel_address"
+            android:layout_below="@+id/rel_imei"
+            android:layout_marginTop="@dimen/layout_y_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="@dimen/layout_x_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地址:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/layout_x_18" />
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_marginLeft="@dimen/layout_x_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="南山智园"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:textSize="@dimen/layout_x_15" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

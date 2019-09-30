@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="layout_y_1">3px</dimen>
+    <dimen name="layout_y_2">7px</dimen>
+    <dimen name="layout_y_5">18px</dimen>
+    <dimen name="layout_y_8">29px</dimen>
+    <dimen name="layout_y_10">37px</dimen>
+    <dimen name="layout_y_15">55px</dimen>
+    <dimen name="layout_y_18">66px</dimen>
+    <dimen name="layout_y_20">74px</dimen>
+    <dimen name="layout_y_30">111px</dimen>
+    <dimen name="layout_y_36">133px</dimen>
+    <dimen name="layout_y_40">148px</dimen>
+    <dimen name="layout_y_45">166px</dimen>
+    <dimen name="layout_y_46">170px</dimen>
+    <dimen name="layout_y_50">185px</dimen>
+    <dimen name="layout_y_55">203px</dimen>
+    <dimen name="layout_y_60">222px</dimen>
+    <dimen name="layout_y_62">229px</dimen>
+    <dimen name="layout_y_65">240px</dimen>
+    <dimen name="layout_y_70">259px</dimen>
+    <dimen name="layout_y_80">296px</dimen>
+    <dimen name="layout_y_100">370px</dimen>
+    <dimen name="layout_y_180">666px</dimen>
+    <dimen name="layout_y_220">814px</dimen>
+
+</resources>

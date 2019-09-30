@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="edit_rule">qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890&#38;!&#033;@&#064;#&#035;$&#036;%&#037;^&#094;*&#042;</string>
+    <string name="edit_apn">qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890.</string>
+
+</resources>
